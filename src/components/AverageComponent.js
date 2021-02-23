@@ -17,13 +17,14 @@ export default function AverageComponent(props) {
     const styles = StyleSheet.create({
         container: {
             marginTop: 10,
-            width: "80%",
+            width: "100%",
             borderLeftWidth: 5,
             borderLeftColor: props.option.op === "CE" ? "green" : "red",
             backgroundColor: "#ccc",
             elevation: 5,
             textAlign: "center",
             padding: 2,
+            alignSelf: "center",
         },
         txt: {
             textAlign: "center",

@@ -4,10 +4,9 @@ import {
     Button,
     RadioButton,
     TextInput,
-    Divider,
     IconButton,
 } from "react-native-paper";
-import { StyleSheet, Text, View, LogBox } from "react-native";
+import { StyleSheet, Text, View, LogBox, ScrollView } from "react-native";
 import AverageComponent from "./src/components/AverageComponent";
 
 export default function App() {
@@ -122,7 +121,9 @@ export default function App() {
                 </View>
 
                 {/* List of averages */}
-                {avgComponents ? avgComponents : null}
+                <ScrollView style={styles.scrollView}>
+                    {avgComponents ? avgComponents : null}
+                </ScrollView>
 
                 {/* Refresh App */}
                 <View style={styles.refresh}>
@@ -179,6 +180,11 @@ const styles = StyleSheet.create({
     },
 
     refresh: {
-        paddingBottom: 20,
+        paddingBottom: 5,
+    },
+
+    scrollView: {
+        marginTop: 5,
+        width: "90%",
     },
 });
